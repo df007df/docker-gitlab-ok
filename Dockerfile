@@ -7,11 +7,6 @@ MAINTAINER df "duanfeisj@tuniu.com"
 USER root
 
 RUN yum install -y curl openssh-server
-RUN systemctl enable sshd
-RUN systemctl start sshd
-RUN yum install -y postfix
-RUN systemctl enable postfix
-RUN systemctl start postfix
 RUN firewall-cmd --permanent --add-service=http
 RUN systemctl reload firewalld
 
