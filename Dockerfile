@@ -13,6 +13,6 @@ RUN yum install -y curl openssh-server
 RUN curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | bash
 RUN yum install -y gitlab-ce
 
-RUN sudo gitlab-ctl reconfigure
+RUN gitlab-ctl reconfigure
 
 CMD ls -l -a
